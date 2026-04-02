@@ -9,5 +9,3 @@ CREATE TABLE persons (
 	phone VARCHAR (15) NOT NULL,
 	CONSTRAINT pk_persons PRIMARY KEY (id)
 )
-
-SELECT * FROM persons
