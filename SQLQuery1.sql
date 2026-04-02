@@ -15,5 +15,16 @@ CREATE TABLE persons (
 ALTER TABLE persons
 ADD email VARCHAR(50) NOT NULL	
 
+-- Remove the column phone from the persons table
+
+ALTER TABLE persons
+DROP COLUMN phone
+
+-- Display table
+
 SELECT *
 FROM persons
+
+-- Delete the table persons from the database
+
+DROP TABLE persons
