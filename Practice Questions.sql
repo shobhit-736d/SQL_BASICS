@@ -1,4 +1,6 @@
-								-------------------- Practice questions --------------------									
+								-------------------- Practice questions --------------------	
+								
+--------------------DQL (DATA QUERY LANGUAGE)--------------------------
 
 select *
 from customers
@@ -83,6 +85,8 @@ select
 	count(score) as no_of_customers
 	from customers
 	where score > 500
+
+---------------------DDL (DATA DEFINITION LANGUAGE)----------------------
 
 	/*
 Create a table named students with columns:
@@ -251,3 +255,5 @@ Add foreign key in employees table referencing departments table.
 -- Delete departments table but only if no other table depends on it.
 
 DROP TABLE departments
+
+------------------------DML(DATA MANIPULATION LANGUAGE)--------------------
