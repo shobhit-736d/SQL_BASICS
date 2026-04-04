@@ -257,3 +257,57 @@ Add foreign key in employees table referencing departments table.
 DROP TABLE departments
 
 ------------------------DML(DATA MANIPULATION LANGUAGE)--------------------
+
+/*
+Insert 3 persons into the empty persons table.
+
+Example idea:
+1, Aman Sharma, 23, Delhi
+2, Neha Verma, 28, Lucknow
+3, Riya Singh, 25, Kanpur
+*/
+
+INSERT INTO persons (id, person_name, person_age, city)
+VALUES	
+	(1, 'Aman Sharma', 23, 'Delhi'),
+	(2, 'Neha Verma', 28, 'Lucknow'),
+	(3, 'Riya Singh', 25, 'Kanpur')
+
+-- Insert a new customer whose name is Ankit Rao and city Delhi.
+
+INSERT INTO persons (id, person_name, city)
+VALUES	
+	(4, 'Ankit Rao', 'Delhi')
+
+/*
+Insert 2 new customers:
+Rahul Mehta from Mumbai
+Priya Kapoor from Pune
+*/
+
+INSERT INTO persons (id, person_name, city)
+VALUES	
+	(5, 'Rahul Mehta', 'Mumbai'),
+	(6, 'Priya Kapoor', 'Pune')
+
+--Update the city of Neha Verma in persons table from Lucknow → Noida.
+
+UPDATE persons
+SET city = 'Noida'
+WHERE person_name = 'Neha Verma'
+
+--Increase the age of Aman Sharma by 1 year.
+
+UPDATE persons
+SET person_age = person_age + 1
+WHERE person_name = 'Aman Sharma'
+
+--Delete the record of Riya Singh from persons table.
+
+DELETE FROM persons
+WHERE id = 3
+
+--Delete all persons whose age is greater than 26 (but this will affect only inserted data).
+
+DELETE FROM persons
+WHERE person_age > 26
