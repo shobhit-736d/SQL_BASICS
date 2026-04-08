@@ -307,7 +307,35 @@ WHERE person_name = 'Aman Sharma'
 DELETE FROM persons
 WHERE id = 3
 
---Delete all persons whose age is greater than 26 (but this will affect only inserted data).
 
-DELETE FROM persons
-WHERE person_age > 26
+----------------------------------------WHERE CONDITION----------------------------------------
+
+--Show customers whose score is greater than 0 and not equal to 500.
+
+SELECT * 
+FROM customers
+WHERE score > 0 AND score = 500
+
+--Select customers whose name ends with 'n' and score greater than 600.
+
+SELECT *
+FROM customers
+WHERE first_name LIKE '%n' AND score > 600
+
+--Select customers whose score is divisible by 100.
+
+SELECT *
+FROM customers
+WHERE score % 100 = 0
+
+--Display customers whose name length seems greater than 4 letters.
+
+SELECT *
+FROM customers
+WHERE first_name LIKE '_____%'
+
+--Display orders where sales > 10 AND sales < 40 AND sales != 20.
+
+SELECT *
+FROM orders
+WHERE sales > 10 AND sales < 40 AND sales != 20
